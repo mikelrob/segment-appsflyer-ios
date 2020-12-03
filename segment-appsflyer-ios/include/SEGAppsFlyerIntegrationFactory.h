@@ -7,13 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#if SWIFT_PACKAGE
+#import "Segment.h"
+#else
+
 #if defined(__has_include) && __has_include(<Analytics/SEGIntegrationFactory.h>)
 #import <Analytics/SEGIntegrationFactory.h>
 #else
 #import <Segment/SEGIntegrationFactory.h>
 #endif
-#import "SEGAppsFlyerIntegration.h"
 
+#endif
+
+#import "SEGAppsFlyerIntegration.h"
 
 @interface SEGAppsFlyerIntegrationFactory : NSObject <SEGIntegrationFactory>
 

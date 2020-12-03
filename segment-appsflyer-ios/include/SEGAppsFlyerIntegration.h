@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#if SWIFT_PACKAGE
+#import "Segment.h"
+#else
+
 #if defined(__has_include) && __has_include(<Analytics/SEGAnalytics.h>)
 #import <Analytics/SEGAnalytics.h>
 #else
@@ -18,6 +22,8 @@
 #import <Analytics/SEGAnalyticsUtils.h>
 #else
 #import <Segment/SEGAnalyticsUtils.h>
+#endif
+
 #endif
 
 #import <AppsFlyerLib/AppsFlyerLib.h>
